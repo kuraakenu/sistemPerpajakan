@@ -1,4 +1,4 @@
 # sistemPerpajakan
 Dummy Project #1
 
-Coming Soon! ~s
+Coming Soon! ~
