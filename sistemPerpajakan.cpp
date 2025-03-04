@@ -13,6 +13,7 @@ bool regist(bool success);
 bool isUsnValid();
 bool isPassValid();
 bool isBlank(string str);
+void menu();
 
 struct dataKendaraan{
     string brandKendaraan;
@@ -20,12 +21,33 @@ struct dataKendaraan{
     int harga;
 };
 
-
 int main(){
     welcome();
-    cout << "ASEK";
+    menu();
     return 0;
 }
+
+void menu(){
+    system("cls");
+    cout << "Hai " << usn << "!\n";
+    cout << "Selamat Datang di Kantor Pajak Elahorde!\n";
+    cout << "Silakan Pilih!\n";
+    cout << "[1] Informasi Kendaraan\n";
+    cout << "[2] Bayar Pajak\n";
+    cout << "[3] Mendaftarkan Kendaraan\n";
+    cout << "[4] Informasi Pribadi\n";
+    cout << "[5] EXIT\n";
+    cout << "Input: ";
+
+}
+
+
+
+
+
+
+
+// START //
 
 void welcome(){
     char choice;
@@ -51,7 +73,6 @@ void welcome(){
         }
     }while(!success);
 }
-
 bool login(bool success){
     system("cls");
     int coba = 3;
@@ -81,7 +102,6 @@ bool login(bool success){
     cout << "Silakan Ulangi!\n";
     system("pause");
 }
-
 bool regist(bool success){\
     bool valid = false;
     bool blank = true;
@@ -129,7 +149,6 @@ bool regist(bool success){\
     system("pause");
     return true;
 }
-
 bool isUsnValid(){
     if(usn.length() > 12){
         return false;
@@ -141,7 +160,6 @@ bool isUsnValid(){
     }
     return true;
 }
-
 bool isPassValid(){
     bool hasDigit = false;
     if(pass.length() > 10){
@@ -161,7 +179,6 @@ bool isPassValid(){
         return false;
     }
 }
-
 bool isBlank(string str){
     if(str.empty()){
         return true;
